@@ -1,0 +1,24 @@
+field_name,type,reddit_role,analysis_role,notes,type_long,reddit_role_long,analysis_role_long
+author,s,a,i,Note the [deleted] and [removed] entries.,short text,author info,id
+author_flair_text,c,a,a,31% NaN values.,categorical,author info,analysis
+created_utc,t,p,a,Dups present.,timestamp,post details,analysis
+domain,s,p,a,Domain where the post originated from.,short text,post details,analysis
+full_link,u,p,r,A link to the post on Reddit.,url,post details,reference
+id,s,p,i,Post id,short text,post details,id
+locked,b,ma,a,"Only 6 values are true, everything else false.",binary flag,mod reactions to either post content or comments activity on it,analysis
+num_comments,n,ga,a,,numeric,general subreddit users reactions to the post,analysis
+num_crossposts,n,aa,a,Both NaN and zeros present. Few values >0.,numeric,author actions on the post (other than commenting),analysis
+over_18,b,p,a,98% false. Looks like a NSFW-type label on the post content.,binary flag,post details,analysis
+pinned,b,aa,a,Users can pin up to 4 posts to their profile.,binary flag,author actions on the post (other than commenting),analysis
+score,n,ga,a,The score is based on up and down votes.,numeric,general subreddit users reactions to the post,analysis
+selftext,l,p,a,Can have [deleted] as values.,long text,post details,analysis
+spoiler,b,aa,a,"Spoiler tags are used to mark spoiler content, and they can blur the preview or thumbnails. Both mods and post authors can add a spoiler tag on a post. There were 30 true values in the sample, so decided to keep it.",binary flag,author actions on the post (other than commenting),analysis
+stickied,b,aa,f,Mods can pin up to 2 of their own posts to the top of the subreddit. This tag used to be called announcements.,binary flag,author actions on the post (other than commenting),filtering
+title,l,p,a,"Title of the post, can be very long.",long text,post details,analysis
+url,u,p,r,Url to the original post if crossposted or from other source.,url,post details,reference
+banned_by,c,ma,f,The only values are NaN and moderators.,categorical,mod reactions to either post content or comments activity on it,filtering
+edited,t,aa,a,86% NaNs.,timestamp,author actions on the post (other than commenting),analysis
+crosspost_parent,s,p,t,Cross-post parent post id.,short text,post details,transform
+crosspost_parent_list,l,p,t,This ultimately contains the body text of a crossposted post. Just have to pull if out of the list of dicts.,long text,post details,transform
+distinguished,c,aa,f,"Mods can tag posts as distinguished, usually used for subreddit management. Use this field for filtering out these posts.",categorical,author actions on the post (other than commenting),filtering
+author_fullname,s,a,i,"Unclear what this is, and lots of NaNs, but decided to keep for now.",short text,author info,id
