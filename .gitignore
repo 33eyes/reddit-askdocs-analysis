@@ -131,3 +131,6 @@ dmypy.json
 
 # Pickles
 *.pkl
+
+# Local notes MD file
+scratch.md 
